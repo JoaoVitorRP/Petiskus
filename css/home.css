@@ -1,0 +1,119 @@
+.nav-buttons {
+  width: 100%;
+
+  display: flex;
+
+  position: fixed;
+  top: 65px;
+  left: 0;
+  z-index: 3;
+}
+
+.nav-buttons button {
+  width: 100%;
+  height: 28px;
+  border: none;
+  border-radius: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 18px;
+}
+
+.nav-buttons button:hover {
+  cursor: pointer;
+}
+
+.active-navbar {
+  background-color: #dcdcdc;
+  box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+
+  color: #000000;
+}
+
+.inactive-navbar {
+  background-color: #3c3a9f;
+
+  color: #ffffff;
+}
+
+.inactive-navbar:hover {
+  background-color: #2e2d7e;
+}
+
+main {
+  width: 100%;
+  padding: 93px 80px 0 80px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.carousel-container {
+  width: 450px;
+  height: 450px;
+}
+
+.carousel {
+  width: 450px;
+  height: 450px;
+}
+
+.carousel-inner .carousel-item img,
+.carousel-inner .carousel-item a img {
+  width: 450px;
+  height: 450px;
+}
+
+.carousel-caption h5,
+.carousel-caption p {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.itens-container {
+  width: 100%;
+
+  display: flex;
+}
+
+.item-cards-container {
+  margin-left: 20px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.cards {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 180px;
+  height: 250px;
+  padding: 15px;
+  border-radius: 20px;
+  background-color: #d9d9d9;
+  margin: 15px 15px 0 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  border-radius: 10px;
+}
+
+.card p {
+  margin: 0;
+
+  font-size: 14px;
+}
