@@ -44,11 +44,7 @@
 }
 
 main {
-  width: 100%;
-  padding: 93px 80px 0 80px;
-
-  display: flex;
-  flex-direction: column;
+  padding-top: 93px;
 }
 
 .carousel-container {

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PetShop Petiskus</title>
+
+    <link href="./css/reset.css" rel="stylesheet" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+    </style>
+    <link href="./css/general.css" rel="stylesheet" />
+    <link href="./css/header.css" rel="stylesheet" />
+    <link href="./css/signup.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <a href="./index.html">
+        <h1 class="roboto-bold">🐶🐱 Petiskus</h1>
+      </a>
+
+      <div>
+        <a href="#">
+          <ion-icon class="cart-icon" name="cart" aria-label="Carrinho"></ion-icon>
+        </a>
+
+        <img class="profile-picture" src="./images/default_pfp.jpg" alt="Profile" />
+        <a href="./signup.html">
+          <p class="roboto-regular login-text">Cadastre-se</p>
+        </a>
+      </div>
+    </header>
+
+    <!-- Conteúdo principal da página -->
+    <main>
+      <h2 class="roboto-bold">Cadastrar uma conta</h2>
+
+      <!-- Formulário de cadastro -->
+      <form onsubmit="alert('Cliente cadastrado com sucesso!')">
+        <div class="client-and-pet-data">
+          <h2 class="roboto-bold">Seus dados:</h2>
+
+          <!-- Nome do cliente -->
+          <label class="roboto-bold form-label" for="name">Nome:</label>
+          <input
+            class="roboto-regular form-input"
+            id="name"
+            type="text"
+            name="name"
+            pattern="[A-zÀ-ž\s]*"
+            placeholder="Digite seu nome aqui"
+            required
+          />
+
+          <!-- E-mail do cliente -->
+          <label class="roboto-bold form-label" for="email">Email:</label>
+          <input
+            class="roboto-regular form-input"
+            id="email"
+            type="email"
+            name="email"
+            placeholder="email@email.com"
+            required
+          />
+
+          <!-- Div que permite dois inputs na mesma linha -->
+          <div class="side-by-side">
+            <div class="input-container">
+              <!-- Senha do cliente -->
+              <label class="roboto-bold form-label" for="password">Senha:</label>
+              <input
+                class="roboto-regular form-input"
+                id="password"
+                type="password"
+                name="password"
+                minlength="6"
+                placeholder="Mínimo 6 caracteres"
+                required
+              />
+            </div>
+
+            <div class="input-container">
+              <!-- Telefone do cliente -->
+              <label class="roboto-bold form-label" for="phone">Telefone:</label>
+              <input
+                class="roboto-regular form-input"
+                id="phone"
+                type="tel"
+                name="phone"
+                pattern="(\([0-9]{2}\))\s([9]{1})?([0-9]{4})-([0-9]{4})"
+                placeholder="(XX) 9XXXX-XXXX"
+                required
+              />
+            </div>
+          </div>
+
+          <!-- Div que permite dois inputs na mesma linha -->
+          <div class="side-by-side">
+            <div class="input-container">
+              <!-- CEP do cliente -->
+              <label class="roboto-bold form-label" for="cep">CEP:</label>
+              <input
+                class="roboto-regular form-input"
+                id="cep"
+                type="text"
+                name="cep"
+                pattern="[0-9]{5}-[0-9]{3}"
+                placeholder="_____-___"
+                required
+              />
+            </div>
+
+            <div class="input-container">
+              <!-- Estado do cliente -->
+              <label class="roboto-bold form-label" for="state">Estado:</label>
+              <!-- Ao invés de um input, são apresentadas opções para o cliente escolher -->
+              <select class="roboto-regular form-input" id="state" name="state" required>
+                <option value="">-- Selecione seu estado --</option>
+                <option value="AC">AC</option>
+                <option value="AL">AL</option>
+                <option value="AP">AP</option>
+                <option value="AM">AM</option>
+                <option value="BA">BA</option>
+                <option value="CE">CE</option>
+                <option value="DF">DF</option>
+                <option value="ES">ES</option>
+                <option value="GO">GO</option>
+                <option value="MA">MA</option>
+                <option value="MT">MT</option>
+                <option value="MS">MS</option>
+                <option value="MG">MG</option>
+                <option value="PA">PA</option>
+                <option value="PB">PB</option>
+                <option value="PR">PR</option>
+                <option value="PE">PE</option>
+                <option value="PI">PI</option>
+                <option value="RJ">RJ</option>
+                <option value="RN">RN</option>
+                <option value="RS">RS</option>
+                <option value="RO">RO</option>
+                <option value="RR">RR</option>
+                <option value="SC">SC</option>
+                <option value="SP">SP</option>
+                <option value="SE">SE</option>
+                <option value="TO">TO</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Div que permite dois inputs na mesma linha -->
+          <div class="side-by-side">
+            <div class="input-container">
+              <!-- Cidade do cliente -->
+              <label class="roboto-bold form-label" for="city">Cidade:</label>
+              <input
+                class="roboto-regular form-input"
+                id="city"
+                type="text"
+                name="city"
+                pattern="[A-zÀ-ž\s]*"
+                placeholder="Nome da cidade"
+                required
+              />
+            </div>
+
+            <div class="input-container">
+              <!-- Rua do cliente -->
+              <label class="roboto-bold form-label" for="street">Rua:</label>
+              <input
+                class="roboto-regular form-input"
+                id="street"
+                type="text"
+                name="city"
+                pattern="[A-zÀ-ž\s]*"
+                placeholder="Nome da rua"
+                required
+              />
+            </div>
+          </div>
+
+          <!-- Div que permite dois inputs na mesma linha -->
+          <div class="side-by-side">
+            <div class="input-container">
+              <!-- Número da casa do cliente -->
+              <label class="roboto-bold form-label" for="number">Número:</label>
+              <input
+                class="roboto-regular form-input"
+                id="number"
+                type="number"
+                name="number"
+                placeholder="Número da casa"
+                title="Caso seja s/n, deixe o campo vazio"
+              />
+            </div>
+
+            <div class="input-container">
+              <!-- Telefone do cliente -->
+              <label class="roboto-bold form-label" for="extraInfo">Complemento:</label>
+              <input
+                class="roboto-regular form-input"
+                id="extraInfo"
+                type="text"
+                name="extraInfo"
+                placeholder="Apartamento, bloco, etc."
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Linha vertical separando as seções -->
+        <div class="vl"></div>
+
+        <!-- Dados do pet -->
+        <div class="client-and-pet-data">
+          <h2 class="roboto-bold">Dados do seu pet:</h2>
+
+          <!-- Nome do pet -->
+          <label class="roboto-bold form-label" for="petName">Nome:</label>
+          <input
+            class="roboto-regular form-input"
+            id="petName"
+            type="text"
+            name="petName"
+            pattern="[A-zÀ-ž\s]*"
+            placeholder="Digite o nome do seu pet aqui"
+            required
+          />
+
+          <!-- Tipo de pet -->
+          <fiedlset>
+            <legend class="roboto-bold">Selecione o tipo do seu pet:</legend>
+            <div class="center">
+              <!-- Tipo: cachorro -->
+              <input class="roboto-regular" id="petTypeDog" type="radio" name="petType" value="Cachorro" required />
+              <label class="roboto-regular radio-label" for="petTypeDog">Cachorro</label>
+              <!-- Tipo: gato -->
+              <input class="roboto-regular" id="petTypeCat" type="radio" name="petType" value="Gato" required />
+              <label class="roboto-regular radio-label" for="petTypeCat">Gato</label>
+            </div>
+          </fiedlset>
+
+          <!-- Raça do pet -->
+          <label class="roboto-bold form-label" for="breed">Raça:</label>
+          <input
+            class="roboto-regular form-input"
+            id="breed"
+            type="text"
+            name="breed"
+            pattern="[A-zÀ-ž\s]*"
+            placeholder="Digite a raça do seu pet"
+            required
+          />
+
+          <!-- Temperamento do pet -->
+          <fiedlset>
+            <legend class="roboto-bold">Selecione o temperamento do seu pet:</legend>
+            <div class="center">
+              <!-- Temperamento: agitado -->
+              <input
+                class="roboto-regular"
+                id="petBehaviorCalm"
+                type="radio"
+                name="petBehavior"
+                value="Calmo"
+                required
+              />
+              <label class="roboto-regular radio-label" for="petBehaviorCalm">Calmo</label>
+              <!-- Tipo: gato -->
+              <input
+                class="roboto-regular"
+                id="petBehaviorAgitated"
+                type="radio"
+                name="petBehavior"
+                value="Agitado"
+                required
+              />
+              <label class="roboto-regular radio-label" for="petBehaviorAgitated">Agitado</label>
+            </div>
+          </fiedlset>
+
+          <!-- Observações adicionais -->
+          <label class="roboto-bold form-label" for="additionalInfo">Informações adicionais:</label>
+          <textarea
+            class="roboto-regular form-input form-textarea"
+            id="additionalInfo"
+            name="additionalInfo"
+            placeholder="Sinta-se livre para adicionar aqui o que desejas que nossa equipe saiba"
+          ></textarea>
+
+          <button class="roboto-bold main-button" type="submit">Cadastrar</button>
+        </div>
+      </form>
+    </main>
+
+    <!-- Script do Ion Icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>

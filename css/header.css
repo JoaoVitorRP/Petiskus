@@ -40,9 +40,13 @@ header div {
 }
 
 .login-text {
-  width: 95px;
+  width: 100px;
   margin: 0;
 
   font-size: 18px;
   font-style: italic;
+}
+
+.login-text:hover {
+  text-decoration: underline;
 }
