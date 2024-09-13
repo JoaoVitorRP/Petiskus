@@ -18,6 +18,9 @@ a,
 a:hover,
 a:focus,
 a:active {
+  width: fit-content;
+  height: fit-content;
+
   text-decoration: none;
   color: inherit;
 }

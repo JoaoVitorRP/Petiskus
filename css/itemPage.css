@@ -1,0 +1,29 @@
+.content {
+  margin-top: 30px;
+
+  display: flex;
+  align-items: center;
+}
+
+.image-container {
+  width: 450px;
+  min-width: 450px;
+  height: 550px;
+  border-radius: 30px;
+  margin-right: 50px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.description {
+  max-width: 550px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.description h2 {
+  margin-top: 0;
+}
