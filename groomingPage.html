@@ -5,12 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PetShop Petiskus</title>
     <link href="./css/reset.css" rel="stylesheet" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
     </style>
@@ -46,7 +40,7 @@
         <div class="image-container" style="background-image: url(./images/tosa_pet.jpeg)"></div>
 
         <div class="description">
-          <h2 class="roboto-bold">Serviço de tosa</h2>
+          <h2 class="roboto-bold no-margin-top">Serviço de tosa</h2>
 
           <p class="roboto-regular">
             Tosa segura e confortável para o seu pet! Nosso serviço de tosa é realizado com muito cuidado e atenção,
@@ -56,7 +50,9 @@
 
           <h2 class="roboto-bold">R$70.00</h2>
 
-          <button class="roboto-bold main-button">Contratar serviço</button>
+          <a href="./servicePayment.html" onclick="selectGrooming()">
+            <button class="roboto-bold main-button">Contratar serviço</button>
+          </a>
         </div>
       </div>
     </main>
@@ -64,5 +60,8 @@
     <!-- Script do Ion Icons -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- Script da página de tosa -->
+    <script src="./scripts/groomingPage.js"></script>
   </body>
 </html>

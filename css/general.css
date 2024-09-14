@@ -82,3 +82,64 @@ main {
 
   cursor: pointer;
 }
+
+.center {
+  display: flex;
+  align-items: center;
+}
+
+.vl {
+  width: 2px;
+  height: 529px;
+  background-color: #d9d9d9;
+  margin: 0 30px;
+}
+
+.form-label,
+legend {
+  margin: 20px 0 5px 0;
+
+  font-size: 18px;
+}
+
+.form-input {
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  background-color: #d9d9d9;
+  padding: 5px 15px;
+
+  font-size: 18px;
+}
+
+.form-input::placeholder {
+  font-style: italic;
+  color: #7d7d7d;
+  letter-spacing: 0.5px;
+}
+
+.side-by-side {
+  width: 100%;
+  display: flex;
+}
+
+/* Seleciona a primeira div de cada elemento que contém a classe "side-by-side" e aplica uma margem */
+.side-by-side > :first-child {
+  margin-right: 20px;
+}
+
+.input-container {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+select {
+  cursor: pointer;
+}
+
+.no-margin-top {
+  margin-top: 0;
+}

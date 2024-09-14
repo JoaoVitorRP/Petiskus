@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PetShop Petiskus</title>
+    <link href="./css/reset.css" rel="stylesheet" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+    </style>
+    <link href="./css/general.css" rel="stylesheet" />
+    <link href="./css/header.css" rel="stylesheet" />
+    <link href="./css/servicePayment.css" rel="stylesheet" />
+  </head>
+  <body onload="loadServiceSelected()">
+    <!-- Header -->
+    <header>
+      <a href="./index.html">
+        <h1 class="roboto-bold">🐶🐱 Petiskus</h1>
+      </a>
+
+      <div>
+        <a href="#">
+          <ion-icon class="cart-icon" name="cart" aria-label="Carrinho"></ion-icon>
+        </a>
+
+        <img class="profile-picture" src="./images/default_pfp.jpg" alt="Profile" />
+        <a href="./signup.html">
+          <p class="roboto-regular login-text">Cadastre-se</p>
+        </a>
+      </div>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+      <h2 class="roboto-bold">Pagamento</h2>
+
+      <form class="main-content" action="paymentConfirm.html">
+        <!-- Div contendo o serviço contratado e o valor -->
+        <div class="service-and-price">
+          <!-- Div contendo o título e o serviço contratado -->
+          <div>
+            <h2 class="roboto-bold no-margin-top">Serviço contratado:</h2>
+
+            <!-- Card do serviço -->
+            <div class="service-card">
+              <img src="" alt="Serviço contratado" id="serviceImage" />
+
+              <div class="description">
+                <p class="roboto-bold" id="serviceType">Carregando...</p>
+                <hr />
+                <p class="roboto-bold" id="servicePrice">R$ Carregando...</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Div contendo a seleção de opções de tele-busca e o valor total -->
+          <div>
+            <!-- Seleção de opções da tele-busca -->
+            <p class="roboto-bold">Você deseja que nossa equipe busque seu pet no endereço cadastrado?</p>
+            <div class="center">
+              <input id="yes" type="radio" name="petTaxi" />
+              <label class="roboto-regular radio-label" for="yes">Desejo tele-busca</label>
+            </div>
+
+            <div class="center">
+              <input id="no" type="radio" name="petTaxi" checked />
+              <label class="roboto-regular radio-label" for="no">Não desejo tele-busca</label>
+            </div>
+
+            <!-- Linha horizontal separando os conteúdos -->
+            <hr />
+
+            <!-- Preço total -->
+            <div class="spread">
+              <h2 class="roboto-bold no-margin-top">Total a pagar:</h2>
+              <h2 class="roboto-bold no-margin-top" id="totalPrice">R$ Carregando...</h2>
+            </div>
+          </div>
+        </div>
+
+        <!-- Div de linha vertical -->
+        <div class="vl"></div>
+
+        <!-- Informações de pagamento -->
+        <div class="payment-info">
+          <h2 class="roboto-bold no-margin-top">Dados de pagamento:</h2>
+
+          <!-- Div que permite dois inputs lado a lado -->
+          <div class="side-by-side">
+            <!-- Número do cartão -->
+            <div class="input-container">
+              <label class="roboto-bold form-label no-margin-top" for="cardNumber">Número do cartão:</label>
+              <input
+                class="roboto-regular form-input"
+                id="cardNumber"
+                type="text"
+                name="cardNumber"
+                pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}"
+                placeholder="XXXX-XXXX-XXXX-XXXX"
+                required
+              />
+            </div>
+
+            <!-- CVV -->
+            <div class="input-container">
+              <label class="roboto-bold form-label no-margin-top" for="cvv">Código de segurança:</label>
+              <input
+                class="roboto-regular form-input"
+                id="cvv"
+                type="text"
+                name="cvv"
+                pattern="[0-9]{3}"
+                placeholder="CVV"
+                required
+              />
+            </div>
+          </div>
+
+          <!-- Nome que consta no cartão -->
+          <label class="roboto-bold form-label" for="name">Nome no cartão:</label>
+          <input
+            class="roboto-regular form-input"
+            id="name"
+            type="text"
+            name="name"
+            pattern="[A-zÀ-ž\s]*"
+            placeholder="Digite o nome exatamente como consta no cartão"
+            required
+          />
+
+          <!-- Data de expiração -->
+          <label class="roboto-bold form-label" for="expMonth">Data de expiração:</label>
+          <!-- Div que permite dois inputs lado a lado -->
+          <div class="side-by-side">
+            <!-- Mês de expiração -->
+            <select class="roboto-regular form-input month-selector" id="expMonth" name="expMonth" required>
+              <option value="01">01</option>
+              <option value="02">02</option>
+              <option value="03">03</option>
+              <option value="04">04</option>
+              <option value="05">05</option>
+              <option value="06">06</option>
+              <option value="07">07</option>
+              <option value="08">08</option>
+              <option value="09">09</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+            </select>
+
+            <!-- Ano de expiração -->
+            <select class="roboto-regular form-input year-selector" id="expYear" name="expYear" required>
+              <option value="2025">2025</option>
+              <option value="2026">2026</option>
+              <option value="2027">2027</option>
+              <option value="2028">2028</option>
+              <option value="2029">2029</option>
+              <option value="2030">2030</option>
+              <option value="2031">2031</option>
+              <option value="2032">2032</option>
+              <option value="2033">2033</option>
+              <option value="2034">2034</option>
+              <option value="2035">2035</option>
+              <option value="2036">2036</option>
+              <option value="2037">2037</option>
+              <option value="2038">2038</option>
+              <option value="2039">2039</option>
+              <option value="2040">2040</option>
+              <option value="2041">2041</option>
+              <option value="2042">2042</option>
+              <option value="2043">2043</option>
+              <option value="2044">2044</option>
+            </select>
+          </div>
+
+          <!-- Linha horizontal com uma margem no topo de 28px -->
+          <hr style="margin-top: 28px" />
+
+          <!-- Botão de enviar o formulário -->
+          <button class="roboto-bold main-button" type="submit">Finalizar pagamento</button>
+        </div>
+      </form>
+    </main>
+
+    <!-- Script do Ion Icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- Script da página de pagamento de serviços -->
+    <script src="./scripts/servicePayment.js"></script>
+  </body>
+</html>

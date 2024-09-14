@@ -10,7 +10,7 @@
     </style>
     <link href="./css/general.css" rel="stylesheet" />
     <link href="./css/header.css" rel="stylesheet" />
-    <link href="./css/itemPage.css" rel="stylesheet" />
+    <link href="./css/paymentConfirm.css" rel="stylesheet" />
   </head>
   <body>
     <!-- Header -->
@@ -33,37 +33,19 @@
 
     <!-- Conteúdo principal -->
     <main>
-      <h2 class="roboto-bold">Você está visualizando: Serviço de banho</h2>
+      <!-- Div contendo a confirmação e o botão -->
+      <div class="confirmation">
+        <ion-icon name="bag-check" class="green bag-icon"></ion-icon>
+        <h2 class="roboto-bold green">Compra concluída com sucesso! Seu aumigo agradece, obrigado pela preferência 🐶🐱</h2>
 
-      <!-- Div contendo a imagem do serviço e a descrição -->
-      <div class="content">
-        <div class="image-container" style="background-image: url(./images/banho_pet.jpg)"></div>
-
-        <div class="description">
-          <h2 class="roboto-bold no-margin-top">Serviço de banho</h2>
-
-          <p class="roboto-regular">Seu pet merece um dia de spa! Relaxe enquanto cuidamos de tudo:</p>
-          <ul class="roboto-regular">
-            <li>Banho personalizado para cada pelagem</li>
-            <li>Massagem relaxante</li>
-            <li>Produtos naturais e hipoalergênicos</li>
-            <li>Ambiente tranquilo e seguro. Saiba que seu aumigo está em boas mãos!</li>
-          </ul>
-
-          <h2 class="roboto-bold">R$30.00</h2>
-
-          <a href="./servicePayment.html" onclick="selectBath()">
-            <button class="roboto-bold main-button">Contratar serviço</button>
-          </a>
-        </div>
+        <a href="./index.html">
+          <button class="roboto-bold main-button">Voltar à página inicial</button>
+        </a>
       </div>
     </main>
 
     <!-- Script do Ion Icons -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
-    <!-- Script da página de banho -->
-    <script src="./scripts/bathPage.js"></script>
   </body>
 </html>

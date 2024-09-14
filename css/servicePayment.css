@@ -1,0 +1,96 @@
+.main-content {
+  width: 100%;
+  height: 70vh;
+
+  display: flex;
+}
+
+.service-and-price {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.service-and-price > div {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card {
+  width: 100%;
+  height: 100px;
+  padding: 15px;
+  border-radius: 30px;
+  background-color: #d9d9d9;
+
+  display: flex;
+}
+
+.service-card img {
+  height: 100%;
+  border-radius: 15px;
+}
+
+.description {
+  width: 100%;
+  height: 100%;
+  margin-left: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+hr {
+  width: 100%;
+}
+
+input[type="radio"] {
+  width: 15px;
+  height: 15px;
+  margin: 5px;
+
+  cursor: pointer;
+}
+
+.radio-label {
+  margin-right: 10px;
+  cursor: pointer;
+
+  font-size: 14px;
+}
+
+.payment-info {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.month-selector {
+  width: 70px;
+}
+
+.year-selector {
+  width: 100px;
+}
+
+.vl {
+  height: 100%;
+}
+
+.spread {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.spread h2 {
+  width: fit-content;
+}

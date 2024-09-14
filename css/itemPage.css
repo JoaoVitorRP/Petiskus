@@ -24,6 +24,6 @@
   flex-direction: column;
 }
 
-.description h2 {
-  margin-top: 0;
+.description a {
+  width: 100%;
 }

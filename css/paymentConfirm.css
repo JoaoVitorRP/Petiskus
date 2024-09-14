@@ -1,0 +1,27 @@
+main {
+  height: 100vh;
+
+  justify-content: center;
+}
+
+.confirmation {
+  width: 50vw;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.confirmation a {
+  width: 100%;
+}
+
+.green {
+  color: #1d9409;
+  text-align: center;
+  line-height: 30px;
+}
+
+.bag-icon {
+  font-size: 150px;
+}
