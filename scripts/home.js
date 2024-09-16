@@ -28,6 +28,9 @@ function toggleAll() {
   const servicesContainer = document.getElementById("servicesContainer");
   servicesContainer.classList.add("itens-container");
   servicesContainer.classList.remove("hidden");
+
+  //Atribui o valor correspondente no SessionStorage do que foi selecionado
+  sessionStorage.setItem("selectedContent", "all");
 }
 
 function toggleProducts() {
@@ -50,6 +53,9 @@ function toggleProducts() {
   const productsContainer = document.getElementById("productsContainer");
   productsContainer.classList.add("itens-container");
   productsContainer.classList.remove("hidden");
+
+  //Atribui o valor correspondente no SessionStorage do que foi selecionado
+  sessionStorage.setItem("selectedContent", "products");
 }
 
 function toggleServices() {
@@ -72,4 +78,20 @@ function toggleServices() {
   const servicesContainer = document.getElementById("servicesContainer");
   servicesContainer.classList.add("itens-container");
   servicesContainer.classList.remove("hidden");
+
+  //Atribui o valor correspondente no SessionStorage do que foi selecionado
+  sessionStorage.setItem("selectedContent", "services");
+}
+
+//Carrega o conteúdo conforme a seleção do usuário no footer
+function loadSelectedContent() {
+  const selectedContent = sessionStorage.getItem("selectedContent");
+
+  if (selectedContent === "products") {
+    toggleProducts();
+  } else if (selectedContent === "services") {
+    toggleServices();
+  } else {
+    toggleAll();
+  }
 }

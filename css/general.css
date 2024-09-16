@@ -62,7 +62,7 @@ h4 {
 
 main {
   width: 100%;
-  padding: 65px 80px 50px 80px;
+  padding: 65px 80px 100px 80px;
 
   display: flex;
   flex-direction: column;
@@ -142,4 +142,22 @@ select {
 
 .no-margin-top {
   margin-top: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  margin-top: auto;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.no-margin-bottom {
+  margin-bottom: 0;
 }
